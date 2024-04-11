@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Text Selector</title>
+</head>
+<body>
+
+<!-- This is where the random text will be displayed -->
+<p id="randomNumber">Random text will appear here</p>
+
+<script>
+// Wait for the document to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    var textArray = [
+      "Ты красавица!!",
+      "Доченька! Привет моя радость!!!",
+      "Как ты спала сегодня моя птичка?",
+      "Доченька моя любимая Поздравляю и тебя с Днём Рождения",
+      "Mоя прелесть!\nПриятного просмотра и общения😍",
+      "Радость моя 😍и я тебя сильно сильно люблю",
+      "Люблю тебя 😘",
+      "Солнце моё ❤️❤️❤️",
+      "Нелче я так тебя люблю сильно сильно",
+      "Только береги себя", // Added a comma here
+      "Люблююю тебя❤️❤️❤️❤️❤️" // Added a comma here
+    ];
+
+    // Select a random text from the array
+    var randomNumber = Math.floor(Math.random() * textArray.length);
+  
+    // Display the selected text within the element with ID 'randomNumber'
+    document.getElementById("randomNumber").innerHTML = textArray[randomNumber];
+});
+</script>
+
+</body>
+</html>
