@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "denis/character",
+  "title": "Part character",
+  "category": "design",
+  "icon": "smiley",
+  "description": "One of the animated IFS 'parts' characters. Pick which one and how big it is in the block settings.",
+  "keywords": [ "character", "part", "ifs", "illustration" ],
+  "textdomain": "denis-ifs-2026",
+  "attributes": {
+    "character": { "type": "string", "default": "self" },
+    "size": { "type": "number", "default": 120 }
+  },
+  "supports": {
+    "html": false,
+    "align": [ "left", "center", "right" ],
+    "spacing": { "margin": true }
+  },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}

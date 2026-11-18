@@ -1,0 +1,10 @@
+Fonts bundled with this theme, all licensed under the SIL Open Font License, Version 1.1
+(https://openfontlicense.org):
+
+- Fraunces: Copyright 2020 The Fraunces Project Authors (https://github.com/undercasetype/Fraunces)
+- Instrument Serif: Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+- Caveat: Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+- Figtree: Copyright 2022 The Figtree Project Authors (https://github.com/erikdkennedy/figtree)
+
+Files were taken from the Fontsource npm packages (@fontsource-variable/fraunces, @fontsource/instrument-serif,
+@fontsource-variable/caveat, @fontsource-variable/figtree).

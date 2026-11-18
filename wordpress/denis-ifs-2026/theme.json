@@ -1,0 +1,376 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "1240px",
+			"wideSize": "1400px"
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "frame",
+					"name": "Burgundy",
+					"color": "#7b2b18"
+				},
+				{
+					"slug": "cream",
+					"name": "Cream",
+					"color": "#f7f0e4"
+				},
+				{
+					"slug": "paper",
+					"name": "Paper",
+					"color": "#fbf7ef"
+				},
+				{
+					"slug": "tomato",
+					"name": "Tomato",
+					"color": "#e8532f"
+				},
+				{
+					"slug": "butter",
+					"name": "Butter",
+					"color": "#f4e08a"
+				},
+				{
+					"slug": "sky",
+					"name": "Sky",
+					"color": "#b9d2ee"
+				},
+				{
+					"slug": "lime",
+					"name": "Shirt green",
+					"color": "#9cc45c"
+				},
+				{
+					"slug": "teal",
+					"name": "Shirt teal",
+					"color": "#5f8f78"
+				},
+				{
+					"slug": "ink",
+					"name": "Ink",
+					"color": "#2b1a12"
+				},
+				{
+					"slug": "muted",
+					"name": "Muted brown",
+					"color": "#5f4a3f"
+				},
+				{
+					"slug": "white",
+					"name": "White",
+					"color": "#ffffff"
+				}
+			],
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"custom": true
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fluid": true,
+			"fontSizes": [
+				{
+					"slug": "small",
+					"name": "Small",
+					"size": "0.88rem"
+				},
+				{
+					"slug": "medium",
+					"name": "Medium",
+					"size": "1.05rem"
+				},
+				{
+					"slug": "large",
+					"name": "Large",
+					"size": "1.6rem",
+					"fluid": {
+						"min": "1.35rem",
+						"max": "1.6rem"
+					}
+				},
+				{
+					"slug": "x-large",
+					"name": "Extra large",
+					"size": "2.6rem",
+					"fluid": {
+						"min": "1.8rem",
+						"max": "2.6rem"
+					}
+				},
+				{
+					"slug": "xx-large",
+					"name": "Huge",
+					"size": "4rem",
+					"fluid": {
+						"min": "2.6rem",
+						"max": "4rem"
+					}
+				}
+			],
+			"fontFamilies": [
+				{
+					"slug": "logo",
+					"name": "Fraunces (logo)",
+					"fontFamily": "Fraunces, \"Cooper Black\", Georgia, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Fraunces",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/fraunces-latin-full-normal.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Fraunces",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/fraunces-latin-ext-full-normal.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						}
+					]
+				},
+				{
+					"slug": "serif",
+					"name": "Instrument Serif (headings)",
+					"fontFamily": "\"Instrument Serif\", \"Times New Roman\", Georgia, serif",
+					"fontFace": [
+						{
+							"fontFamily": "Instrument Serif",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/instrument-serif-latin-400-normal.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Instrument Serif",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/instrument-serif-latin-ext-400-normal.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						},
+						{
+							"fontFamily": "Instrument Serif",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/instrument-serif-latin-400-italic.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Instrument Serif",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/instrument-serif-latin-ext-400-italic.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						}
+					]
+				},
+				{
+					"slug": "script",
+					"name": "Caveat (handwriting)",
+					"fontFamily": "Caveat, \"Segoe Script\", cursive",
+					"fontFace": [
+						{
+							"fontFamily": "Caveat",
+							"fontStyle": "normal",
+							"fontWeight": "400 700",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/caveat-latin-wght-normal.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Caveat",
+							"fontStyle": "normal",
+							"fontWeight": "400 700",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/caveat-latin-ext-wght-normal.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						}
+					]
+				},
+				{
+					"slug": "body",
+					"name": "Figtree (text)",
+					"fontFamily": "Figtree, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Figtree",
+							"fontStyle": "normal",
+							"fontWeight": "300 900",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/figtree-latin-wght-normal.woff2"
+							],
+							"unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+						},
+						{
+							"fontFamily": "Figtree",
+							"fontStyle": "normal",
+							"fontWeight": "300 900",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/figtree-latin-ext-wght-normal.woff2"
+							],
+							"unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"
+						}
+					]
+				}
+			]
+		},
+		"spacing": {
+			"units": [
+				"px",
+				"rem",
+				"%",
+				"vw"
+			],
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"slug": "20",
+					"name": "Small",
+					"size": "0.75rem"
+				},
+				{
+					"slug": "40",
+					"name": "Medium",
+					"size": "1.5rem"
+				},
+				{
+					"slug": "60",
+					"name": "Large",
+					"size": "clamp(2.5rem,5vw,4rem)"
+				},
+				{
+					"slug": "80",
+					"name": "Section",
+					"size": "clamp(4rem,8vw,7rem)"
+				}
+			]
+		},
+		"custom": {
+			"gutter": "max(16px, 4vw)"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--cream)",
+			"text": "var(--wp--preset--color--ink)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "16px",
+			"lineHeight": "1.6"
+		},
+		"spacing": {
+			"blockGap": "1.1rem",
+			"padding": {
+				"left": "max(16px, 4vw)",
+				"right": "max(16px, 4vw)",
+				"top": "0",
+				"bottom": "0"
+			}
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serif)",
+					"fontWeight": "400",
+					"lineHeight": "1.04",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(2.4rem, 5vw, 3.6rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(2rem, 4vw, 3rem)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "1.7rem"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "inherit"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--tomato)",
+					"text": "var(--wp--preset--color--white)"
+				},
+				"border": {
+					"radius": "999px"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--body)",
+					"fontSize": "0.78rem",
+					"fontWeight": "600",
+					"letterSpacing": "0.12em",
+					"textTransform": "uppercase"
+				},
+				"spacing": {
+					"padding": {
+						"top": "11px",
+						"bottom": "11px",
+						"left": "26px",
+						"right": "26px"
+					}
+				}
+			}
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "page-no-title",
+			"title": "Page without title (designed pages)",
+			"postTypes": [
+				"page"
+			]
+		}
+	]
+}
