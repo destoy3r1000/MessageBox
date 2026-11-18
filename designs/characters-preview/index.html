@@ -1,0 +1,232 @@
+<title>Parts Characters</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=Instrument+Serif:ital@0;1&family=Caveat:wght@600&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: a cobalt "sky" header like Denis's illustration, then a sheet of character cards on cream paper */
+:root{
+  --sky:#1f5c8f;
+  --paper:#f3ead6;
+  --card:#fbf6ea;
+  --red:#d62e1f;
+  --mustard:#e8a92c;
+  --navy:#14263b;
+  --muted:#4d5566;
+  --burg:#7b2b18;
+  --logo:"Fraunces", "Cooper Black", Georgia, serif;
+  --serif:"Instrument Serif", Georgia, serif;
+  --script:"Caveat", cursive;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--navy);font-family:var(--body);line-height:1.55}
+.in{max-width:1180px;margin:0 auto;padding-left:max(16px,4vw,env(safe-area-inset-left,0px));padding-right:max(16px,4vw,env(safe-area-inset-right,0px))}
+header{background:var(--sky);color:var(--paper);position:relative;overflow:hidden;padding-block:56px 70px}
+header::after{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .12 0 0 0 0 .2 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+header .stack{position:relative;z-index:1}
+.eyebrow{font:700 .78rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--mustard)}
+h1{font-family:var(--logo);font-variation-settings:"SOFT" 100;font-weight:900;font-size:clamp(2.8rem,7vw,5rem);line-height:.9;letter-spacing:-.03em;margin:10px 0 16px}
+header p{max-width:60ch;margin:0;opacity:.9}
+.parade{display:flex;justify-content:center;align-items:flex-end;gap:4px;margin-top:34px;flex-wrap:wrap}
+.parade .chr{width:clamp(44px,7.4vw,84px)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-block:48px 36px}
+.card{background:var(--card);border-radius:26px;padding:16px 18px 20px;text-align:center;min-width:0;border:0;font:inherit;color:inherit;cursor:pointer;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card .chr{width:150px;margin:0 auto}
+.card h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.05;margin:6px 0 4px}
+.card .topic{font:700 .7rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.card p{margin:6px 0 0;font-family:var(--script);font-size:1.3rem;color:var(--muted);line-height:1.1}
+@media (max-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.grid{grid-template-columns:repeat(2,1fr)}.card .chr{width:120px}}
+.notes{padding-block:0 60px}
+.notes div{background:var(--card);border-radius:22px;padding:22px 24px;max-width:760px}
+.notes h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:0 0 8px}
+.notes ul{margin:0;padding-left:20px;color:var(--muted)}
+.notes li{margin-bottom:6px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:8px}
+
+/* characters */
+.chr{display:block}
+.chr svg{display:block;width:100%;height:auto;overflow:visible}
+.card:hover .chr svg,.chr.hop svg{animation:hop .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes hop{30%{transform:translateY(-12%) scale(1.05,.95)}60%{transform:translateY(0) scale(.96,1.04)}}
+@media (prefers-reduced-motion:no-preference){
+  .a-bob{animation:bob 3.2s ease-in-out infinite}
+  .a-sway{animation:sway 4s ease-in-out infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-breathe{animation:breathe 3.8s ease-in-out infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-shake{animation:shake 3s ease-in-out infinite;transform-origin:50% 90%;transform-box:view-box}
+  .a-tremble{animation:tremble 2.2s linear infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-pulse{animation:pulse 1.8s ease-in-out infinite;transform-origin:50% 60%;transform-box:view-box}
+  .blink{animation:blink 5s infinite;transform-origin:center;transform-box:fill-box}
+  .look{animation:look 6s ease-in-out infinite}
+  .wag{animation:wag 1.2s ease-in-out infinite;transform-origin:0% 100%;transform-box:fill-box}
+  .zz{animation:zz 3s ease-in infinite;transform-box:fill-box}
+  .zz.d2{animation-delay:1s}.zz.d3{animation-delay:2s}
+  .steam{animation:steam 1.6s ease-out infinite;transform-box:fill-box;transform-origin:center}
+  .steam.d2{animation-delay:.8s}
+  .glow{animation:glow 2.2s ease-in-out infinite}
+  .walk-l{animation:walk .8s ease-in-out infinite;transform-origin:50% 0%;transform-box:fill-box}
+  .walk-r{animation:walk .8s ease-in-out infinite reverse;transform-origin:50% 0%;transform-box:fill-box}
+  .spin{animation:spin 20s linear infinite;transform-origin:70px 80px}
+  .hbeat{animation:pulse 1.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+  .drop{animation:drop 2.4s ease-in infinite;transform-box:fill-box}
+  .float{animation:float 3s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
+  .ear{animation:ear 3.5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+  .trunk{animation:trunk 3.8s ease-in-out infinite;transform-box:fill-box;transform-origin:100% 0%}
+}
+@keyframes bob{50%{transform:translateY(-5px)}}
+@keyframes sway{25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes breathe{50%{transform:scale(1.03,.97)}}
+@keyframes shake{0%,70%,100%{transform:none}74%{transform:translateX(-3px) rotate(-2deg)}78%{transform:translateX(3px) rotate(2deg)}82%{transform:translateX(-3px) rotate(-2deg)}86%{transform:translateX(3px) rotate(1deg)}90%{transform:none}}
+@keyframes tremble{0%,100%{transform:none}25%{transform:translateX(-.8px)}75%{transform:translateX(.8px)}}
+@keyframes pulse{50%{transform:scale(1.06)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@keyframes look{0%,40%,100%{transform:none}50%,85%{transform:translateX(2px)}}
+@keyframes wag{50%{transform:rotate(-14deg)}}
+@keyframes zz{0%{opacity:0;transform:translate(0,6px)}20%{opacity:1}100%{opacity:0;transform:translate(10px,-22px)}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px) scale(.6)}30%{opacity:.9}100%{opacity:0;transform:translateY(-16px) scale(1.3)}}
+@keyframes glow{50%{opacity:.45}}
+@keyframes walk{50%{transform:rotate(18deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drop{0%{opacity:0;transform:translateY(-4px)}20%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+@keyframes float{50%{transform:translateY(-6px) rotate(4deg)}}
+@keyframes ear{50%{transform:rotate(-8deg)}}
+@keyframes trunk{50%{transform:rotate(12deg)}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- screen-print texture: wobbly edge + speckled ink -->
+    <filter id="tex" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="1" seed="9" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.2 1.45" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in"/>
+    </filter>
+    <!-- engraved hatching used for shadows -->
+    <pattern id="hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="3.2" stroke="#14263b" stroke-width="1"/></pattern>
+    <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset=".42" stop-color="#000"/><stop offset=".95" stop-color="#fff"/></linearGradient>
+    <mask id="shade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#mg)"/></mask>
+  </defs>
+</svg>
+
+<header>
+  <div class="in stack">
+    <span class="eyebrow">Character sheet · preview</span>
+    <h1>Parts, redrawn</h1>
+    <p>A new take on the characters, borrowing from the creatures in Denis’s IFS illustration: bulging staring eyes, the illustration’s red, cobalt, sky blue, mustard and bottle green, with engraved shading and print speckle. Each one still has its own little animation. Tap a card to make it hop.</p>
+    <div class="parade" id="parade" aria-hidden="true"></div>
+  </div>
+</header>
+
+<main class="in">
+  <div class="grid" id="grid"></div>
+</main>
+<section class="notes in">
+  <div>
+    <h3>What changed from the current characters</h3>
+    <ul>
+      <li>Colours now come from the head illustration instead of pastel pinks and purples.</li>
+      <li>Big white staring eyes with small pupils, like the creatures in the drawing.</li>
+      <li>Engraved hatching for shadows and speckled ink, so they feel printed rather than flat.</li>
+      <li>More creature-like: a little red devil, a frog, a white rabbit, an elephant, a shouting red head.</li>
+      <li>One new part: the little one with the red balloon.</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+(function(){
+var N='#14263b',RED='#d62e1f',DRED='#8e1c12',COB='#1f5c8f',SKY='#7fb3df',PALE='#b5d3ec',MUS='#e8a92c',GRN='#2f4f3e',CRM='#f3ead6',PINK='#e9a38c';
+var S='stroke="'+N+'" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"';
+/* a body shape printed in one ink, plus hatched shadow on the lower right */
+function B(tag,attrs,fill,extra){return '<'+tag+' '+attrs+' fill="'+fill+'" filter="url(#tex)" '+(extra||'')+'/><'+tag+' '+attrs+' fill="url(#hatch)" mask="url(#shade)" opacity=".5"/>';}
+function eye(x,y,r,dx,dy){r=r||9;dx=dx||0;dy=dy||0;return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="#fbf6ea" stroke="'+N+'" stroke-width="1.6"/><g class="look"><circle cx="'+(x+dx)+'" cy="'+(y+dy)+'" r="'+(r*.3)+'" fill="'+N+'"/></g>';}
+function eyes(a,b,r,dx,dy){return '<g class="blink">'+eye(a[0],a[1],r,dx,dy)+eye(b[0],b[1],r,dx,dy)+'</g>';}
+function shut(x,y,w){w=w||6;return '<path d="M'+(x-w)+' '+y+' Q'+x+' '+(y+w*.8)+' '+(x+w)+' '+y+'" '+S+'/>';}
+function legs(x1,x2,y1,y2,foot,cls){cls=cls||['',''];foot=foot||N;
+  return '<g class="'+cls[0]+'"><path d="M'+x1+' '+y1+' L'+x1+' '+y2+'" '+S+'/><ellipse cx="'+(x1-4)+'" cy="'+(y2+1)+'" rx="7" ry="3.6" fill="'+foot+'"/></g>'+
+         '<g class="'+cls[1]+'"><path d="M'+x2+' '+y1+' L'+x2+' '+y2+'" '+S+'/><ellipse cx="'+(x2+4)+'" cy="'+(y2+1)+'" rx="7" ry="3.6" fill="'+foot+'"/></g>';}
+function cheeks(a,b,c){return '<circle cx="'+a[0]+'" cy="'+a[1]+'" r="5" fill="'+(c||RED)+'" opacity=".45"/><circle cx="'+b[0]+'" cy="'+b[1]+'" r="5" fill="'+(c||RED)+'" opacity=".45"/>';}
+function specks(seed,cx,cy,rx,ry,c){var s=seed,o='';function R(){s=(s*16807)%2147483647;return s/2147483647;}for(var i=0;i<9;i++){var a=R()*6.28,d=Math.sqrt(R());o+='<circle cx="'+(cx+Math.cos(a)*rx*d).toFixed(1)+'" cy="'+(cy+Math.sin(a)*ry*d).toFixed(1)+'" r="'+(0.6+R()*0.9).toFixed(2)+'" fill="'+(c||RED)+'" opacity=".55"/>';}return o;}
+var SH='<ellipse cx="70" cy="142" rx="36" ry="4.5" fill="'+N+'" opacity=".14"/>';
+function star(cx,cy,ro,ri,n){var p=[];for(var i=0;i<n*2;i++){var r=i%2?ri:ro,a=Math.PI*i/n-Math.PI/2;p.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));}return p.join(' ');}
+
+var C={
+ identity:{name:'Identity',part:'the white rabbit',say:'“Which me is the real me?”',g:function(){return SH+'<g class="a-sway">'+legs(60,80,126,138,CRM)+
+   '<g class="ear">'+B('ellipse','cx="56" cy="30" rx="8" ry="24" transform="rotate(-12 56 30)"',CRM,'stroke="'+N+'" stroke-width="1.4"')+'<ellipse cx="56" cy="32" rx="3.2" ry="16" transform="rotate(-12 56 32)" fill="'+RED+'" opacity=".8"/></g>'+
+   B('ellipse','cx="86" cy="30" rx="8" ry="24" transform="rotate(14 86 30)"',SKY)+
+   B('path','d="M70 48 C96 48 108 72 106 98 C104 122 90 132 70 132 C50 132 36 122 34 98 C32 72 44 48 70 48Z"',CRM,'stroke="'+N+'" stroke-width="1.4"')+
+   specks(11,70,100,26,22,SKY)+eyes([58,78],[82,78],10,2,-3)+
+   '<circle cx="70" cy="94" r="3.2" fill="'+RED+'"/><path d="M64 102 Q70 106 76 102" '+S+'/>'+
+   '<path d="M36 96 L22 88 M104 96 L118 88" '+S+'/></g>';}},
+ body:{name:'Body',part:'the one that holds',say:'“I’m allowed to feel at home here.”',g:function(){return SH+'<g class="a-breathe">'+legs(58,82,124,138,MUS)+
+   B('circle','cx="70" cy="86" r="44"',MUS)+specks(21,70,86,34,34)+
+   shut(56,78,7)+shut(84,78,7)+cheeks([48,92],[92,92])+'<path d="M62 98 Q70 106 78 98" '+S+'/>'+
+   '<path d="M30 90 C44 112 78 114 98 102" '+S+'/><path d="M110 90 C96 112 62 114 42 102" '+S+'/></g>';}},
+ habits:{name:'Habits',part:'the frog that scrolls',say:'“Just one more scroll…”',g:function(){return SH+'<g class="a-bob">'+legs(52,88,122,138,GRN)+
+   B('ellipse','cx="70" cy="100" rx="48" ry="32"',GRN)+B('circle','cx="50" cy="70" r="15"',GRN)+B('circle','cx="90" cy="70" r="15"',GRN)+
+   eyes([50,68],[90,68],10,0,4)+'<path d="M44 98 Q70 110 96 98" stroke="'+DRED+'" stroke-width="2.4" fill="none" stroke-linecap="round"/>'+
+   '<rect x="60" y="104" width="22" height="30" rx="4" fill="'+N+'"/><rect class="glow" x="63" y="108" width="16" height="21" rx="2" fill="'+MUS+'"/>'+
+   '<path d="M28 106 Q42 120 60 116 M112 106 Q98 120 82 116" stroke="'+GRN+'" stroke-width="5" fill="none" stroke-linecap="round"/></g>';}},
+ critic:{name:'Inner critic',part:'the little red devil',say:'“You could have done better.”',g:function(){return SH+'<g>'+legs(58,82,124,138,DRED)+
+   '<path d="M100 118 C118 122 122 108 116 102 L124 98 L114 96" stroke="'+DRED+'" stroke-width="3" fill="none" stroke-linecap="round"/>'+
+   '<path d="M50 44 L42 16 L62 38Z M90 44 L98 16 L78 38Z" fill="'+DRED+'"/>'+
+   '<path d="M38 88 L22 102" '+S+'/><g class="wag"><path d="M102 80 L122 60 L126 48" '+S+'/></g>'+
+   B('path','d="M70 34 C98 34 108 60 106 92 C104 120 92 130 70 130 C48 130 36 120 34 92 C32 60 42 34 70 34Z"',RED)+specks(31,70,90,28,30,N)+
+   '<path d="M46 58 L64 66 M94 58 L76 66" stroke="'+N+'" stroke-width="3.2" stroke-linecap="round"/>'+eyes([57,74],[83,74],9.5,0,1)+
+   '<path d="M56 106 Q70 96 84 106" '+S+'/><path d="M60 103 L62 99 L65 102 M75 102 L78 99 L80 103" stroke="#fbf6ea" stroke-width="1.6" fill="none"/></g>';}},
+ rest:{name:'Rest',part:'the sleepy elephant',say:'“Zzz… just five more minutes.”',g:function(){return SH+'<g class="a-breathe">'+
+   B('ellipse','cx="82" cy="110" rx="46" ry="26"',SKY)+B('circle','cx="42" cy="100" r="24"',SKY)+
+   B('ellipse','cx="54" cy="96" rx="12" ry="17"',PALE)+
+   '<g class="trunk"><path d="M24 106 C10 112 10 128 22 126" stroke="'+SKY+'" stroke-width="10" fill="none" stroke-linecap="round"/></g>'+
+   shut(34,96,6)+'<path d="M112 128 L112 136 M90 132 L90 138" stroke="'+SKY+'" stroke-width="9" stroke-linecap="round"/>'+specks(41,82,108,36,18,COB)+'</g>'+
+   '<text class="zz" x="76" y="70" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="16" fill="'+COB+'">z</text>'+
+   '<text class="zz d2" x="90" y="58" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="20" fill="'+COB+'">z</text>'+
+   '<text class="zz d3" x="106" y="46" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="24" fill="'+COB+'">Z</text>';}},
+ change:{name:'Change',part:'the traveller',say:'“Somewhere new. Scary and exciting.”',g:function(){return SH+'<g class="a-bob">'+legs(58,82,116,136,N,['walk-l','walk-r'])+
+   '<path d="M36 84 L22 96" '+S+'/><path d="M104 84 L114 100" '+S+'/>'+
+   B('path','d="M70 24 C98 24 108 56 106 86 C104 112 92 120 70 120 C48 120 34 112 34 86 C32 56 42 24 70 24Z"',COB)+specks(51,70,74,26,34,PALE)+
+   eyes([58,62],[84,62],10,3,0)+'<path d="M60 88 Q72 98 84 88" stroke="#fbf6ea" stroke-width="2.4" fill="none" stroke-linecap="round"/>'+
+   B('rect','x="106" y="100" width="28" height="22" rx="4"',MUS)+'<path d="M114 100 L114 95 L126 95 L126 100" '+S+'/><path d="M106 110 L134 110" stroke="'+DRED+'" stroke-width="2"/></g>';}},
+ trust:{name:'Trust',part:'the pair holding hands',say:'“I’ve got you.”',g:function(){return SH+'<g class="a-sway">'+
+   legs(36,50,108,136,DRED)+legs(90,106,106,136,N)+
+   B('circle','cx="44" cy="86" r="25"',RED)+B('circle','cx="98" cy="80" r="29"',MUS)+
+   eyes([36,82],[52,82],7,1,0)+eyes([90,76],[106,76],8,-1,0)+
+   '<path d="M38 96 Q44 100 50 96 M92 92 Q98 98 104 92" '+S+'/>'+'<path d="M64 98 L71 106 L76 98" '+S+'/>'+
+   '<path class="hbeat" d="M71 42 C66 34 56 38 60 46 L71 56 L82 46 C86 38 76 34 71 42Z" fill="'+RED+'"/></g>';}},
+ desire:{name:'Desire',part:'the heart with a crush',say:'“What do I actually want?”',g:function(){return SH+'<g class="a-pulse">'+legs(62,78,120,138,DRED)+
+   '<path d="M26 74 L12 64 M114 74 L128 64" '+S+'/>'+
+   B('path','d="M70 126 C30 98 18 76 26 56 C34 36 60 36 70 56 C80 36 106 36 114 56 C122 76 110 98 70 126Z"',RED)+specks(61,70,80,30,22,N)+
+   eyes([56,72],[84,72],9,0,-2)+'<path d="M46 62 L43 56 M51 60 L49 54 M94 62 L97 56 M89 60 L91 54" '+S+'/>'+
+   cheeks([48,88],[92,88],PINK)+'<path d="M64 94 Q70 99 76 94" '+S+'/></g>';}},
+ anger:{name:'Anger',part:'the shouting red head',say:'“That really upset me!”',g:function(){return SH+'<g class="a-shake">'+legs(56,84,116,138,DRED)+
+   B('rect','x="30" y="40" width="80" height="78" rx="14"',RED)+specks(71,70,80,34,32,N)+
+   '<path d="M40 52 L60 60 M100 52 L80 60" stroke="'+N+'" stroke-width="3.4" stroke-linecap="round"/>'+eyes([52,70],[88,70],12.5,0,0)+
+   '<rect x="48" y="90" width="44" height="20" rx="10" fill="#4a0d07"/><path d="M52 92 L88 92" stroke="#fbf6ea" stroke-width="3" stroke-linecap="round"/></g>'+
+   '<circle class="steam" cx="34" cy="26" r="8" fill="#fbf6ea" stroke="'+N+'" stroke-width="1.6"/><circle class="steam d2" cx="106" cy="24" r="9" fill="#fbf6ea" stroke="'+N+'" stroke-width="1.6"/>';}},
+ self:{name:'Self',part:'the calm sun',say:'“Hello. I’m curious about all of you.”',g:function(){var r='';for(var i=0;i<12;i++){var a=i*Math.PI/6;r+='<path d="M'+(70+50*Math.cos(a)).toFixed(1)+' '+(80+50*Math.sin(a)).toFixed(1)+' L'+(70+62*Math.cos(a)).toFixed(1)+' '+(80+62*Math.sin(a)).toFixed(1)+'" stroke="'+(i%2?RED:MUS)+'" stroke-width="4.5" stroke-linecap="round"/>';}
+   return SH+'<g class="spin">'+r+'</g><g class="a-breathe">'+legs(60,80,120,138,COB)+
+   B('circle','cx="70" cy="80" r="42"',MUS)+specks(81,70,80,32,32)+shut(56,76,7)+shut(84,76,7)+cheeks([48,90],[92,90])+'<path d="M58 92 Q70 104 82 92" '+S+'/></g>';}},
+ worry:{name:'Worry',part:'the wide-eyed one',say:'“What if it all goes wrong?”',g:function(){return SH+'<g class="a-tremble">'+legs(62,78,124,138,COB)+
+   '<path d="M44 76 C34 72 36 62 28 58 M96 76 C106 72 104 62 112 58" '+S+'/>'+
+   B('path','d="M70 18 C92 18 98 50 96 80 C94 110 90 126 70 126 C50 126 46 110 44 80 C42 50 48 18 70 18Z"',PALE)+specks(91,70,80,20,36,COB)+
+   eyes([59,58],[81,58],11.5,0,-3)+'<ellipse cx="70" cy="90" rx="4.5" ry="6" fill="'+N+'"/>'+
+   '<path class="drop" d="M102 36 C106 42 106 46 102 46 C98 46 98 42 102 36Z" fill="'+SKY+'" stroke="'+N+'" stroke-width="1.4"/></g>';}},
+ little:{name:'The little one',part:'the kid with the balloon',say:'“Will someone notice me?”',g:function(){return SH+'<g class="a-bob">'+legs(56,70,122,138,N)+
+   B('circle','cx="62" cy="102" r="24"',RED)+specks(101,62,102,18,18,N)+eyes([54,98],[70,98],8,1,-3)+'<path d="M57 112 Q62 115 67 112" '+S+'/>'+
+   '<path d="M84 100 L96 88" '+S+'/></g>'+
+   '<g class="float"><path d="M96 88 C100 70 94 62 104 52" stroke="'+N+'" stroke-width="1.4" fill="none"/>'+B('ellipse','cx="106" cy="36" rx="16" ry="18"',RED)+'<ellipse cx="100" cy="30" rx="4" ry="6" fill="#fbf6ea" opacity=".6"/></g>';}}
+};
+function svg(k){return '<svg viewBox="0 0 140 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+C[k].g()+'</svg>';}
+var order=['identity','body','habits','critic','rest','change','trust','desire','anger','self','worry','little'];
+var topics={identity:'Identity & Belonging',body:'Body Image & Self-Worth',habits:'Habits & Avoidance',critic:'Anxiety & Self-Criticism',rest:'Stress & Burnout',change:'Grief & Life Changes',trust:'Relationships & Connection',desire:'Sex & Intimacy',anger:'Anger & Conflict',self:'Self (IFS)',worry:'Anxiety',little:'New: an exiled part'};
+document.getElementById('grid').innerHTML=order.map(function(k){return '<button type="button" class="card"><span class="chr" data-c="'+k+'">'+svg(k)+'</span><span class="topic">'+topics[k]+'</span><h2>'+C[k].name+'</h2><p>'+C[k].say+'</p></button>';}).join('');
+document.getElementById('parade').innerHTML=order.map(function(k){return '<span class="chr">'+svg(k)+'</span>';}).join('');
+document.querySelectorAll('.chr').forEach(function(el){var d=(-Math.random()*4).toFixed(2)+'s';el.querySelectorAll('[class]').forEach(function(x){x.style.animationDelay=d;});});
+document.getElementById('grid').addEventListener('click',function(e){var b=e.target.closest('.card');if(!b)return;var c=b.querySelector('.chr');c.classList.remove('hop');void c.offsetWidth;c.classList.add('hop');});
+})();
+</script>

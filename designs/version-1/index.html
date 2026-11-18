@@ -1,0 +1,845 @@
+<title>Denis Ruksha IFS Therapy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,900,100&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: a cream sheet inside a burgundy-brown frame. Hand-painted stripes generated from Denis's shirt, and a cast of animated "parts" characters scattered through every page */
+:root{
+  --frame:#7b2b18;
+  --cream:#f7f0e4;
+  --paper:#fbf7ef;
+  --tomato:#e8532f;
+  --butter:#f4e08a;
+  --sky:#b9d2ee;
+  --lime:#9cc45c;
+  --teal:#5f8f78;
+  --ink:#2b1a12;
+  --muted:#5f4a3f;
+  --on-dark:#f7f0e4;
+  --logo:"Fraunces", "Cooper Black", Georgia, serif;
+  --serif:"Instrument Serif", "Times New Roman", Georgia, serif;
+  --script:"Caveat", "Segoe Script", cursive;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max:1240px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--frame);scroll-behavior:smooth}
+body{background:var(--frame);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-block:0 96px;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--frame)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px;border-radius:6px}
+.sheet{background:var(--cream);overflow:hidden}
+.in{padding-left:max(16px,4vw,calc((100% - 1240px) / 2),env(safe-area-inset-left,0px));padding-right:max(16px,4vw,calc((100% - 1240px) / 2),env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.label{display:inline-block;font:700 .78rem var(--body);letter-spacing:.12em;text-transform:uppercase}
+.tagchip{background:var(--sky);padding:3px 12px}
+.script{font-family:var(--script);font-size:1.5rem;color:var(--ink);margin:0 0 2px;transform:rotate(-3deg);display:inline-block;line-height:1.1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--tomato);color:#fff;text-decoration:none;font:600 .78rem var(--body);letter-spacing:.12em;text-transform:uppercase;padding:11px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#d8431f}
+.btn.blue{background:var(--sky);color:var(--ink)}
+.btn.blue:hover{background:#a7c5e8}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* nav on the frame: every item is a bracketed link */
+.topnav{margin:0;display:flex;justify-content:space-between;gap:12px;padding-block:14px;color:var(--on-dark);font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--frame);padding-left:max(16px,4vw,calc((100% - 1240px) / 2),env(safe-area-inset-left,0px));padding-right:max(16px,4vw,calc((100% - 1240px) / 2),env(safe-area-inset-right,0px))}
+.topnav nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.topnav a{text-decoration:none;opacity:.85}
+.topnav a:hover,.topnav a[aria-current="page"]{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.topnav a::before{content:"("}.topnav a::after{content:")"}
+@media (max-width:560px){.topnav .hide-sm{display:none}.topnav nav{gap:6px 14px}}
+
+/* floating booking button */
+.fab{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;box-shadow:0 12px 30px -10px rgba(43,26,18,.55);padding:14px 26px 14px 18px;font-size:.8rem;white-space:nowrap}
+.fab:hover{transform:translateX(-50%) translateY(-2px)}
+.fab .mini{width:30px;height:30px;margin:-6px 0}
+
+/* views */
+.view[hidden]{display:none!important}
+
+/* stripes generated from the shirt */
+.stripes{position:relative;isolation:isolate}
+.stripes > svg.paint{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.hero-photo{min-width:0;background:var(--sky);position:relative}
+@media (min-width:861px){.hero-photo img{position:absolute;inset:0;min-height:0!important}}
+.hero-photo img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:50% 25%;min-height:420px}
+.hero-stripes{min-width:0;padding:44px max(20px,4vw) 52px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.logo{font-family:var(--logo);font-variation-settings:"SOFT" 100;font-weight:900;color:var(--tomato);font-size:clamp(2.8rem,5.6vw,4.4rem);line-height:.82;letter-spacing:-.04em;margin:0 0 30px;text-align:center;background:var(--paper);padding:14px 22px 18px;border-radius:999px/60%}
+.hero-copy{background:var(--paper);padding:22px 24px 26px;border-radius:6px;max-width:470px;box-shadow:0 10px 30px -18px rgba(43,26,18,.5)}
+.hero h1{font-size:clamp(2.2rem,3.8vw,3.2rem)}
+.hero-copy p{font-size:.92rem;margin:8px 0 20px;color:var(--muted)}
+.hero-copy .intro-line{display:block;transform:none;margin-top:14px;font-size:1.55rem;color:var(--tomato)}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero-photo img{min-height:0;aspect-ratio:4/4.2}}
+
+/* ticker */
+.ticker{border-block:1.5px solid var(--frame);overflow:hidden;white-space:nowrap;color:var(--frame);font:700 .74rem var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--cream)}
+.ticker-track{display:inline-flex;gap:28px;padding-block:10px;animation:tick 38s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:28px}
+.ticker span::after{content:"✱";font-size:1rem}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* intro with scattered characters */
+.intro{position:relative;padding-block:112px 48px;text-align:center}
+.intro h2{position:relative;z-index:1;font-size:clamp(1.8rem,3.6vw,2.7rem);max-width:24ch;margin:0 auto;line-height:1.18}
+.intro h2 .hl{background:linear-gradient(transparent 62%,var(--butter) 62%);white-space:nowrap}
+.scatter{position:absolute;width:clamp(70px,9vw,118px)}
+.scatter.s1{left:6%;top:40px}
+.scatter.s2{right:7%;top:30px}
+.scatter.s3{left:2%;top:58%}
+.scatter.s4{right:3%;top:52%}
+.scatter-row{display:none}
+@media (max-width:900px){.chr.scatter{display:none}.scatter-row{display:flex;justify-content:center;gap:10px;margin-top:26px}.scatter-row .chr{width:74px}}
+
+.callout-zone{position:relative;padding-block:30px 90px}
+.callout{position:relative;max-width:560px;margin:0 auto;border:2.5px dashed var(--tomato);border-radius:22px;padding:30px 28px 32px;text-align:center;background:var(--cream);z-index:1}
+.callout .label{margin-bottom:14px}
+.callout h3{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:12px}
+.callout p{margin:0 0 20px;color:var(--muted);font-size:.95rem}
+.doodle{position:absolute;top:0;width:150px;height:150px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round}
+.doodle.l{left:calc(50% - 540px)}
+.doodle.r{right:calc(50% - 540px);transform:scaleX(-1)}
+.callout-zone .scatter.s5{left:calc(50% - 420px);top:110px}
+.callout-zone .scatter.s6{right:calc(50% - 420px);top:110px}
+@media (max-width:1100px){.doodle{display:none}}
+@media (max-width:900px){.callout-zone .chr.scatter{display:none}}
+
+/* topic cards */
+.tray-title{text-align:center;font:700 1rem var(--body);letter-spacing:.06em;text-transform:uppercase;margin:0 0 26px}
+.tray{background:var(--butter);border-radius:44px 44px 0 0;padding-block:64px 80px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--paper);border-radius:28px;padding:26px 26px 32px;text-align:center;min-width:0;display:flex;flex-direction:column;align-items:center}
+.card .chr{width:128px;margin-bottom:-14px}
+.blob{position:relative;z-index:1;display:grid;place-items:center;padding:16px 22px;min-width:104px;margin:6px 0 18px;font-family:var(--logo);font-variation-settings:"SOFT" 100;font-weight:900;font-size:1rem;line-height:.9;letter-spacing:-.01em;color:var(--frame);text-transform:uppercase}
+.blob.o{background:var(--tomato);color:#fff;border-radius:46% 54% 42% 58%/55% 45% 55% 45%;transform:rotate(-5deg)}
+.blob.b{background:var(--sky);border-radius:58% 42% 52% 48%/45% 60% 40% 55%;transform:rotate(4deg)}
+.blob.y{background:var(--butter);border-radius:50% 50% 38% 62%/58% 42% 58% 42%;transform:rotate(-2deg)}
+.card h3{font-size:1.75rem;margin-bottom:12px}
+.card p{margin:0;font-size:.88rem;color:var(--muted);text-align:left}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:580px){.cards{grid-template-columns:1fr}.tray{border-radius:30px 30px 0 0}}
+
+/* credentials: full width text */
+.cred{background:var(--frame);color:var(--on-dark);padding-block:54px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.cred > div{min-width:0}
+.cred-badges{display:flex;gap:14px}
+.badge{width:108px;height:108px;border-radius:50%;background:var(--butter);color:var(--frame);display:grid;place-items:center;text-align:center;font-family:var(--logo);font-variation-settings:"SOFT" 100;font-weight:900;font-size:1.5rem;line-height:1;transform:rotate(-6deg)}
+.badge + .badge{background:var(--sky);transform:rotate(5deg)}
+.badge small{display:block;font:700 .62rem var(--body);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.cred h2{font-size:clamp(1.6rem,3vw,2.3rem)}
+.cred p{margin:12px 0 0;opacity:.88;font-size:1rem}
+.cred .fee{font-family:var(--script);font-size:1.7rem;opacity:1;color:var(--butter);margin-top:8px}
+@media (max-width:760px){.cred{grid-template-columns:1fr}}
+
+/* IFS: illustration as the section background, as on the live site */
+.ifs-bg{position:relative;background:#efe6d2 url(img/inside.webp) 29% 54%/cover no-repeat;border-radius:0 0 50px 50px;min-height:640px;display:flex;align-items:center;padding-block:72px}
+.ifs-card{background:color-mix(in srgb,var(--paper) 92%,transparent);border-radius:24px;padding:32px 30px;max-width:540px;box-shadow:0 18px 40px -24px rgba(43,26,18,.5)}
+.ifs-card h2{font-size:clamp(2.6rem,5vw,3.8rem)}
+.ifs-card .lead{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.3;margin:12px 0 16px}
+.ifs-card p{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+mark{background:linear-gradient(transparent 60%,var(--butter) 60%);color:var(--ink);font-weight:600}
+.parts{font-family:var(--script);font-size:1.5em;color:var(--tomato);font-weight:700}
+@media (max-width:820px){.ifs-bg{background-position:72% 0;background-size:auto 360px;padding-top:300px;min-height:0;align-items:flex-end}}
+
+/* FAQ */
+.faq{padding-block:104px;display:grid;grid-template-columns:.8fr 1.2fr;gap:52px}
+.faq > *{min-width:0}
+.faq h2{font-size:clamp(2.6rem,5vw,3.8rem)}
+.faq-side .script{font-size:1.6rem;color:var(--tomato)}
+.faq-side .pic{position:relative;max-width:320px;margin-top:30px}
+.faq-side img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 50% 50%/46% 46% 54% 54%;border:2px solid var(--frame)}
+.faq-side .pic .chr{position:absolute;width:96px;right:-18px;bottom:-14px}
+details{border-top:1.5px solid var(--frame)}
+details:last-of-type{border-bottom:1.5px solid var(--frame)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-family:var(--serif);font-size:1.45rem;line-height:1.2}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sky);display:grid;place-items:center;transition:transform .25s,background .25s}
+summary .pm::before{content:"+";font:500 1.25rem/1 var(--body);color:var(--ink)}
+details[open] summary .pm{transform:rotate(45deg);background:var(--tomato)}
+details[open] summary .pm::before{color:#fff}
+.ans{padding:0 0 22px;color:var(--muted);max-width:60ch;font-size:.95rem}
+.ans p{margin:0 0 10px}
+.ans .short{font-family:var(--script);font-size:1.5rem;color:var(--frame);line-height:1.1}
+@media (max-width:820px){.faq{grid-template-columns:1fr;gap:16px}.faq-side .pic{max-width:200px}}
+
+/* contact */
+.contact{padding-block:96px}
+.contact-box{max-width:880px;margin:0 auto;background:var(--paper);border:2.5px dashed var(--tomato);border-radius:28px;padding:40px max(20px,4vw);display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-box > *{min-width:0}
+.contact .label{margin-bottom:12px}
+.contact h2{font-size:clamp(2.2rem,4.4vw,3.2rem)}
+.contact p{color:var(--muted)}
+form{display:grid;gap:14px}
+label{font:700 .7rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--frame)}
+label small{text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)}
+input,textarea{width:100%;margin-top:5px;font:inherit;color:var(--ink);background:var(--cream);border:1.5px solid var(--frame);border-radius:14px;padding:11px 14px}
+input:focus,textarea:focus{outline:none;border-color:var(--tomato);box-shadow:0 0 0 3px color-mix(in srgb,var(--tomato) 25%,transparent)}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-self:start}
+.note{font-size:.82rem;color:var(--muted);margin:0}
+.thanks{font-family:var(--script);font-size:1.5rem;color:var(--frame)}
+@media (max-width:760px){.contact-box{grid-template-columns:1fr;gap:24px}}
+
+/* footer */
+footer{position:relative;background:var(--frame);color:var(--on-dark);padding-block:26px;display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;font-size:.85rem}
+footer .logo{font-size:1.7rem;color:var(--butter);margin:0;text-align:left;background:none;padding:0}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .peek{position:absolute;right:8%;top:-58px;width:84px}
+
+/* inner page header */
+.page-head{position:relative;padding-block:64px 56px;text-align:center}
+.page-head h1{font-size:clamp(3rem,8vw,5.6rem)}
+.page-head p{max-width:52ch;margin:16px auto 0;color:var(--muted);font-size:1.05rem}
+.page-head .chr{position:absolute;width:clamp(70px,10vw,120px)}
+.page-head .ph-l{left:6%;bottom:30px}
+.page-head .ph-r{right:6%;top:40px}
+.page-head.on-stripes .head-card{background:var(--paper);display:inline-block;padding:26px 34px 30px;border-radius:28px;max-width:640px;box-shadow:0 10px 30px -18px rgba(43,26,18,.5)}
+@media (max-width:700px){.page-head .chr{position:static;display:inline-block;margin:18px 6px 0}}
+
+/* price page */
+.rates{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-block:20px 72px}
+.rate{background:var(--paper);border-radius:28px;padding:22px 26px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;min-width:0;border:2px solid transparent}
+.rate.std{border-color:var(--tomato)}
+.rate .chr{width:116px}
+.rate .amt{font-family:var(--logo);font-variation-settings:"SOFT" 100;font-weight:900;font-size:3.6rem;line-height:1;color:var(--tomato);letter-spacing:-.03em;margin:6px 0 4px;font-variant-numeric:tabular-nums}
+.rate .amt sup{font-size:.45em;vertical-align:super}
+.rate h3{font-size:1.7rem;margin-bottom:10px}
+.rate p{margin:0;color:var(--muted);font-size:.92rem}
+.rate .per{font:700 .68rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:820px){.rates{grid-template-columns:1fr}}
+.solid{background:var(--frame);color:var(--on-dark);padding-block:44px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.solid p{margin:0}
+.solid .big{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2}
+.solid .small{opacity:.88}
+.solid .small p + p{margin-top:10px}
+@media (max-width:760px){.solid{grid-template-columns:1fr}}
+.rules{padding-block:72px}
+.rules-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:30px}
+.rules-head h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+.rules-head p{margin:0;color:var(--muted);max-width:40ch}
+.rule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.rule-grid > .rule{min-width:0}
+.rule.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start}
+.rule.wide h3{grid-column:1/-1}
+.rule.wide > *{min-width:0}
+.rule.wide .hl-box{margin:0}
+.rule{border-top:1.5px solid var(--frame);padding:20px 0 22px}
+.rule h3{font-size:1.6rem;margin-bottom:8px}
+.rule p{margin:0 0 8px;color:var(--muted);font-size:.95rem}
+.rule .hl-box{background:var(--butter);border-radius:16px;padding:14px 16px;margin:10px 0;color:var(--ink)}
+@media (max-width:760px){.rule-grid,.rule.wide{grid-template-columns:1fr}.rule.wide .hl-box{margin:10px 0}}
+
+/* IFS page */
+.ifs-intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-block:20px 72px}
+.ifs-intro > *{min-width:0}
+.ifs-intro p{margin:0 0 16px;color:var(--muted)}
+.ifs-intro .lead{font-family:var(--serif);font-size:1.6rem;line-height:1.3;color:var(--ink)}
+@media (max-width:820px){.ifs-intro{grid-template-columns:1fr;gap:12px}}
+.cast{background:var(--butter);border-radius:44px;padding-block:52px 56px;margin-inline:max(16px,4vw,calc((100% - 1240px) / 2))}
+.cast-head{text-align:center;margin-bottom:30px}
+.cast-head h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+.cast-head p{margin:10px auto 0;max-width:52ch;color:var(--muted)}
+.cast-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.member{background:var(--paper);border-radius:24px;padding:16px 16px 22px;text-align:center;min-width:0;cursor:pointer;border:0;font:inherit;color:inherit}
+.member .chr{width:110px;margin:0 auto}
+.member h3{font-size:1.35rem;margin:6px 0 6px}
+.member p{margin:0;color:var(--muted);font-size:.86rem}
+@media (max-width:900px){.cast-grid{grid-template-columns:repeat(2,1fr)}}
+.video{padding-block:72px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+.video .chr{width:130px}
+.video h2{font-size:clamp(2rem,4vw,3rem)}
+.video p{color:var(--muted);margin:10px 0 18px;max-width:52ch}
+@media (max-width:640px){.video{grid-template-columns:1fr;text-align:center}.video .chr{margin:0 auto}}
+
+/* blog */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-block:10px 72px}
+.post-card{background:var(--paper);border-radius:28px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;min-width:0;transition:transform .2s}
+.post-card:hover{transform:translateY(-4px)}
+.post-card .art{height:200px;display:flex;align-items:flex-end;justify-content:center;gap:6px;padding:16px}
+.post-card .art .chr{width:110px}
+.post-card .txt{padding:20px 24px 26px}
+.post-card h3{font-size:1.65rem;margin:8px 0 8px}
+.post-card p{margin:0;color:var(--muted);font-size:.9rem}
+.kind{font:700 .66rem var(--body);letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--sky)}
+.kind.story{background:var(--butter)}
+.kind.soon{background:var(--cream);border:1px solid var(--frame)}
+.example{font:600 .7rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--tomato);margin-left:8px}
+@media (max-width:900px){.posts{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.posts{grid-template-columns:1fr}}
+.insta{margin:0 max(16px,4vw,calc((100% - 1240px) / 2)) 72px;border:2.5px dashed var(--tomato);border-radius:28px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.insta p{margin:0;max-width:56ch;color:var(--muted)}
+.insta strong{font-family:var(--serif);font-weight:400;font-size:1.7rem;color:var(--ink);display:block;line-height:1.1;margin-bottom:6px}
+
+/* article template */
+.art-head{text-align:center;padding-block:56px 24px}
+.art-head .meta{font:600 .74rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.art-head h1{font-size:clamp(2.8rem,7vw,5rem);margin-top:10px}
+.art-hero{display:flex;justify-content:center;align-items:flex-end;gap:12px;background:var(--sky);border-radius:36px;margin:0 max(16px,4vw,calc((100% - 1240px) / 2));padding:28px 16px 18px}
+.art-hero .chr{width:clamp(96px,14vw,150px)}
+.prose{max-width:680px;margin:0 auto;padding-block:48px 40px;font-size:1.06rem}
+.prose p{margin:0 0 20px}
+.prose .lede{font-family:var(--serif);font-size:1.6rem;line-height:1.3}
+.prose h2{font-size:2.3rem;margin:44px 0 14px}
+.prose blockquote{margin:36px 0;padding:24px 28px;background:var(--butter);border-radius:26px;font-family:var(--serif);font-style:italic;font-size:1.7rem;line-height:1.25;position:relative}
+.prose blockquote::before{content:"“";font-family:var(--logo);font-style:normal;color:var(--tomato);font-size:4rem;line-height:0;position:absolute;left:18px;top:30px}
+.prose blockquote p{margin:0 0 0 28px}
+.prose figure{margin:36px 0;text-align:center}
+.prose figure .duo{display:flex;justify-content:center;gap:18px;background:var(--paper);border-radius:26px;padding:22px}
+.prose figure .chr{width:130px}
+.prose figcaption{font-family:var(--script);font-size:1.4rem;color:var(--frame);margin-top:8px}
+.prose ul{padding-left:0;list-style:none;margin:0 0 20px}
+.prose li{padding-left:28px;position:relative;margin-bottom:8px}
+.prose li::before{content:"✱";position:absolute;left:0;color:var(--tomato)}
+.prose .aside{border:2.5px dashed var(--tomato);border-radius:22px;padding:20px 22px;margin:32px 0}
+.prose .aside p:last-child{margin:0}
+.author{display:flex;gap:18px;align-items:center;border-top:1.5px solid var(--frame);padding-top:26px;margin-top:40px}
+.author img{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none}
+.author p{margin:0;font-size:.95rem;color:var(--muted)}
+.author strong{color:var(--ink)}
+.next{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:30px}
+
+/* visual story */
+.story-bar{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;padding-block:6px 26px}
+.seg{display:inline-flex;background:var(--paper);border:1.5px solid var(--frame);border-radius:999px;padding:4px}
+.seg button{font:600 .75rem var(--body);letter-spacing:.1em;text-transform:uppercase;border:0;background:transparent;color:var(--ink);padding:8px 16px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--frame);color:var(--on-dark)}
+.story{padding-bottom:64px}
+.frames{display:grid;gap:22px;max-width:620px;margin:0 auto}
+.frame{border-radius:32px;aspect-ratio:4/5;max-width:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;padding:30px 26px 34px;position:relative;overflow:hidden}
+.frame .num{position:absolute;left:20px;top:18px;font:700 .7rem var(--body);letter-spacing:.12em;color:var(--frame);font-variant-numeric:tabular-nums}
+.frame .stage{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;width:100%}
+.frame .stage .chr{width:min(46%,220px)}
+.frame .stage.two .chr{width:min(38%,180px)}
+.frame p{font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.2;margin:0;max-width:20ch}
+.frame.f-butter{background:var(--butter)}.frame.f-sky{background:var(--sky)}.frame.f-paper{background:var(--paper)}.frame.f-frame{background:var(--frame);color:var(--on-dark)}.frame.f-frame .num{color:var(--butter)}
+.frame.f-stripe{background:var(--lime)}
+.frame.f-stripe p{background:var(--paper);padding:12px 18px;border-radius:20px}
+.story.swipe .frames{display:flex;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;padding-inline:calc(50% - min(42vw,260px));scrollbar-width:none;overscroll-behavior-x:contain}
+.story.swipe .frames::-webkit-scrollbar{display:none}
+.story.swipe .frame{flex:none;width:min(84vw,520px);scroll-snap-align:center}
+.story-nav{display:none;justify-content:center;align-items:center;gap:14px;margin-top:20px}
+.story.swipe .story-nav{display:flex}
+.story-nav button.arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--frame);background:var(--paper);color:var(--ink);font-size:1.2rem;cursor:pointer}
+.dots{display:flex;gap:6px}
+.dots span{width:8px;height:8px;border-radius:50%;background:color-mix(in srgb,var(--frame) 30%,transparent);transition:background .2s,width .2s}
+.dots span.on{background:var(--tomato);width:22px;border-radius:999px}
+
+/* ===== characters ===== */
+.chr{display:block;cursor:pointer}
+.chr svg{display:block;width:100%;height:auto;overflow:visible}
+.chr:hover svg,.chr.hop svg{animation:hop .6s cubic-bezier(.3,1.6,.5,1)}
+.c-mini svg{overflow:visible}
+@keyframes hop{30%{transform:translateY(-12%) scale(1.04,.96)}60%{transform:translateY(0) scale(.96,1.04)}}
+@media (prefers-reduced-motion:no-preference){
+  .a-bob{animation:bob 3.2s ease-in-out infinite}
+  .a-sway{animation:sway 4s ease-in-out infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-breathe{animation:breathe 3.8s ease-in-out infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-shake{animation:shake 3s ease-in-out infinite;transform-origin:50% 90%;transform-box:view-box}
+  .a-tremble{animation:tremble 2.4s linear infinite;transform-origin:50% 95%;transform-box:view-box}
+  .a-pulse{animation:pulse 1.8s ease-in-out infinite;transform-origin:50% 60%;transform-box:view-box}
+  .blink{animation:blink 5s infinite;transform-origin:center;transform-box:fill-box}
+  .wag{animation:wag 1.2s ease-in-out infinite;transform-origin:0% 100%;transform-box:fill-box}
+  .wave{animation:wag 1.6s ease-in-out infinite;transform-origin:0% 100%;transform-box:fill-box}
+  .zz{animation:zz 3s ease-in infinite;transform-box:fill-box}
+  .zz.d2{animation-delay:1s}.zz.d3{animation-delay:2s}
+  .steam{animation:steam 1.6s ease-out infinite;transform-box:fill-box;transform-origin:center}
+  .steam.d2{animation-delay:.8s}
+  .glow{animation:glow 2.2s ease-in-out infinite}
+  .walk-l{animation:walk .8s ease-in-out infinite;transform-origin:50% 0%;transform-box:fill-box}
+  .walk-r{animation:walk .8s ease-in-out infinite reverse;transform-origin:50% 0%;transform-box:fill-box}
+  .spin{animation:spin 18s linear infinite;transform-origin:70px 78px}
+  .hbeat{animation:pulse 1.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+  .drop{animation:drop 2.4s ease-in infinite;transform-box:fill-box}
+}
+@keyframes bob{50%{transform:translateY(-5px)}}
+@keyframes sway{25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes breathe{50%{transform:scale(1.03,.97)}}
+@keyframes shake{0%,70%,100%{transform:none}74%{transform:translateX(-3px) rotate(-2deg)}78%{transform:translateX(3px) rotate(2deg)}82%{transform:translateX(-3px) rotate(-2deg)}86%{transform:translateX(3px) rotate(1deg)}90%{transform:none}}
+@keyframes tremble{0%,100%{transform:none}25%{transform:translateX(-.8px)}75%{transform:translateX(.8px)}}
+@keyframes pulse{50%{transform:scale(1.06)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@keyframes wag{50%{transform:rotate(-14deg)}}
+@keyframes zz{0%{opacity:0;transform:translate(0,6px)}20%{opacity:1}100%{opacity:0;transform:translate(10px,-22px)}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px) scale(.6)}30%{opacity:.9}100%{opacity:0;transform:translateY(-16px) scale(1.3)}}
+@keyframes glow{50%{opacity:.45}}
+@keyframes walk{50%{transform:rotate(18deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drop{0%{opacity:0;transform:translateY(-4px)}20%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}.chr:hover svg{animation:none}}
+</style>
+
+<!-- shared SVG filters: wobbly hand-painted edges + crayon grain -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="tex" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.1 1.35" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in"/>
+    </filter>
+    <filter id="wob" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paint" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.018" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.5 1.15" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="topnav">
+  <nav aria-label="Main left">
+    <a href="#home" data-nav="home">home</a>
+    <a href="#ifs" data-nav="ifs">IFS</a>
+    <a href="#price" data-nav="price">price</a>
+  </nav>
+  <nav aria-label="Main right">
+    <a href="#blog" data-nav="blog">blog</a>
+    <a class="hide-sm" href="https://www.instagram.com/denisruksha/">instagram</a>
+    <a href="https://cal.com/denisruksha?orgRedirection=true">book</a>
+  </nav>
+</div>
+
+<a class="btn fab" href="https://cal.com/denisruksha?orgRedirection=true"><span class="chr mini c-mini" data-c="self" aria-hidden="true"></span>Book a free intro</a>
+
+<div class="sheet">
+
+<!-- ================= HOME ================= -->
+<div class="view" data-view="home">
+  <section class="hero">
+    <div class="hero-photo"><img src="img/denis.webp" alt="Denis Ruksha smiling, wearing a green striped shirt"></div>
+    <div class="hero-stripes stripes" data-seed="11">
+      <p class="logo">Denis<br>Ruksha</p>
+      <div class="hero-copy">
+        <h1>IFS Therapy For Gays, Queers &amp; Allies</h1>
+        <span class="script intro-line">my name’s Denis, and I’m an IFS practitioner</span>
+        <p>I believe compassion and science make a great team in therapy, so I keep my heart open to my clients and my mind open to new and better ways to support them.</p>
+        <a class="btn" href="#ifs">More about me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="IFS therapy, online, queer focused, English, Polish, Russian">
+    <div class="ticker-track" aria-hidden="true">
+      <span>IFS therapy</span><span>Online</span><span>Queer focused</span><span>English</span><span>Polish</span><span>Russian</span>
+      <span>IFS therapy</span><span>Online</span><span>Queer focused</span><span>English</span><span>Polish</span><span>Russian</span>
+      <span>IFS therapy</span><span>Online</span><span>Queer focused</span><span>English</span><span>Polish</span><span>Russian</span>
+      <span>IFS therapy</span><span>Online</span><span>Queer focused</span><span>English</span><span>Polish</span><span>Russian</span>
+    </div>
+  </div>
+
+  <section class="intro in">
+    <span class="chr scatter s1" data-c="worry" aria-hidden="true"></span>
+    <span class="chr scatter s2" data-c="self" aria-hidden="true"></span>
+    <span class="chr scatter s3" data-c="identity" aria-hidden="true"></span>
+    <span class="chr scatter s4" data-c="habits" aria-hidden="true"></span>
+    <h2>I mainly work with <span class="hl">queer folks</span> and <span class="hl">expats</span>, but if you don’t belong to either group and think we might be a good fit, don’t hesitate to reach out</h2>
+    <div class="scatter-row" aria-hidden="true"><span class="chr" data-c="worry"></span><span class="chr" data-c="self"></span><span class="chr" data-c="identity"></span><span class="chr" data-c="habits"></span></div>
+  </section>
+
+  <div class="callout-zone in">
+    <svg class="doodle l" viewBox="0 0 170 170" aria-hidden="true"><path d="M120 10 C40 10 20 60 50 90 C80 120 30 140 20 110 C10 80 60 80 90 120 C105 140 130 150 160 150"/><path d="M148 140 L162 150 L148 160"/></svg>
+    <svg class="doodle r" viewBox="0 0 170 170" aria-hidden="true"><path d="M120 10 C60 0 10 40 40 70 C70 100 20 130 40 150 C60 165 110 160 160 150"/><path d="M148 140 L162 150 L148 160"/></svg>
+    <span class="chr scatter s5" data-c="change" aria-hidden="true"></span>
+    <span class="chr scatter s6" data-c="trust" aria-hidden="true"></span>
+    <div class="callout">
+      <span class="label tagchip">Before you scroll any further</span>
+      <h3>Not sure where to start? We begin with a free 30-minute intro.</h3>
+      <p>We’ll get to know each other a little, talk about what brings you here, and leave room for your questions. There’s no obligation to book further sessions.</p>
+      <a class="btn" href="https://cal.com/denisruksha?orgRedirection=true">Book a session</a>
+    </div>
+  </div>
+
+  <p class="tray-title in">What can we work on?</p>
+  <section class="tray in" aria-label="What can we work on">
+    <div class="cards" id="topic-cards"></div>
+  </section>
+
+  <section class="cred in" aria-label="Training">
+    <div class="cred-badges">
+      <div class="badge"><div>IFS<small>Level 1</small></div></div>
+      <div class="badge"><div>DDP<small>Level 2</small></div></div>
+    </div>
+    <div>
+      <h2>I’ve trained in IFS (Level 1) and DDP (Level 2) and am in the final year of my master’s degree in clinical psychology</h2>
+      <p>I continue to develop my practice through further training, regular professional supervision, and peer consultation.</p>
+      <p class="fee">until I graduate, I offer sessions at a <a href="#price">reduced fee</a></p>
+    </div>
+  </section>
+
+  <section class="ifs-bg in" aria-labelledby="t-ifs">
+    <div class="ifs-card">
+      <span class="script">Internal Family Systems</span>
+      <h2 id="t-ifs">What’s IFS?</h2>
+      <p class="lead">IFS is an experiential therapy. It uses our senses as a gateway to the subconscious.</p>
+      <p>Our brain processes much more than our conscious mind can access. Our body records our experiences and gives us <mark>sensory cues</mark> when we face something similar. Something just feels “right” or “scary,” and we move towards or avoid it. It’s that <mark>gut feeling</mark>, a soup of everything we’ve experienced before.</p>
+      <p>These cues are often not interconnected, which might feel quite confusing. We might want to both rest and keep working at the same time. And we might bash ourselves with criticism if we decide to lie down when the job isn’t done.</p>
+      <p>In IFS, we call these cues, sensations, and thoughts <span class="parts">parts</span>. That way, we can structure them and find and heal the underlying causes.</p>
+      <p>There is a lot more to say about it. You can find a more detailed explanation by clicking the button below, or I’ll be happy to explain more during our (free) intake session.</p>
+      <a class="btn" href="#ifs">Read more</a>
+    </div>
+  </section>
+
+  <section class="faq in" aria-labelledby="t-faq">
+    <div class="faq-side">
+      <span class="script">before we start</span>
+      <h2 id="t-faq">Common Questions</h2>
+      <div class="pic"><img src="img/cover.webp" alt="Denis Ruksha in a green striped shirt and patterned tie"><span class="chr" data-c="desire" aria-hidden="true"></span></div>
+    </div>
+    <div>
+      <details open>
+        <summary>Do I need to know what I want to work on?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p class="short">not at all</p><p>We can start with whatever is bothering you at the moment, even if you find it difficult to put into words. As we explore, we may notice feelings or connections you hadn’t been aware of.</p><p>You don’t need to arrive with everything figured out.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to know anything about IFS?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p class="short">no prior knowledge is needed</p><p>I enjoy introducing people to IFS and will explain how it works during our introductory consultation.</p><p>You don’t need to learn any terminology or prepare beforehand. I’ll guide you as we go.</p></div>
+      </details>
+      <details>
+        <summary>Do you only work with queer people and expats?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p class="short">no</p><p>Queer people and expats are the main focus of my practice, but you don’t need to belong to either group to work with me.</p><p>And if you do, our sessions don’t have to focus on your identity or life abroad. We can explore whatever brings you here.</p></div>
+      </details>
+      <details>
+        <summary>What happens in the first session?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p class="short">a free, 30-minute introductory consultation</p><p>We’ll get to know each other a little, talk about what brings you here, and leave room for your questions. I’ll explain how I work and, if there’s time and you’d like to, we can try a brief IFS exercise to give you a feel for the approach.</p><p>There’s no obligation to book further sessions.</p></div>
+      </details>
+      <details>
+        <summary>How often would we meet, and for how long?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>We’ll discuss a rhythm that suits your needs and availability during our introductory consultation.</p><p>There’s no fixed number of sessions: how long we work together depends on what you want to explore and how the work develops.</p><p>The first few sessions give us a chance to see how the approach feels for you, and we’ll keep checking in about whether it’s helping.</p></div>
+      </details>
+      <details>
+        <summary>How do online sessions work?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>You can choose an available appointment through my <a href="https://cal.com/denisruksha?orgRedirection=true">online booking calendar</a> and join our session from your laptop or phone.</p><p>Find a private space where you feel comfortable and can speak without being overheard or interrupted. A reliable internet connection and clear audio are important; headphones with a microphone can help.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="contact in stripes" data-seed="23" aria-labelledby="t-contact">
+    <div class="contact-box">
+      <div>
+        <span class="label tagchip">Get in touch</span>
+        <h2 id="t-contact">Do You Have More Questions?</h2>
+        <p>Write me a message, or book the free 30-minute introductory consultation straight away.</p>
+        <span class="chr" data-c="trust" style="width:130px" aria-hidden="true"></span>
+      </div>
+      <form id="contact-form" novalidate>
+        <div><label for="f-name">Preferred name <small>(required)</small></label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div><label for="f-email">Your email <small>(required)</small></label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+        <button class="btn" type="submit">Email me</button>
+        <p class="note" id="f-status">Demo form: messages are not sent from this preview.</p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ================= IFS ================= -->
+<div class="view" data-view="ifs" hidden>
+  <header class="page-head in">
+    <span class="chr ph-l" data-c="critic" aria-hidden="true"></span>
+    <span class="chr ph-r" data-c="rest" aria-hidden="true"></span>
+    <span class="script">Internal Family Systems</span>
+    <h1>What’s IFS?</h1>
+    <p>Internal Family Systems is an experiential therapy. It uses our senses as a gateway to the subconscious.</p>
+  </header>
+  <section class="ifs-intro in">
+    <div><p class="lead">Our brain processes much more than our conscious mind can access. Our body records our experiences and gives us sensory cues when we face something similar.</p></div>
+    <div>
+      <p>Something just feels “right” or “scary,” and we move towards or avoid it. It’s that <mark>gut feeling</mark>, a soup of everything we’ve experienced before.</p>
+      <p>These cues are often not interconnected, which might feel quite confusing. We might want to both rest and keep working at the same time. And we might bash ourselves with criticism if we decide to lie down when the job isn’t done.</p>
+      <p>In IFS, we call these cues, sensations, and thoughts <span class="parts">parts</span>. That way, we can structure them and find and heal the underlying causes.</p>
+    </div>
+  </section>
+  <section class="cast" aria-labelledby="t-cast">
+    <div class="cast-head in">
+      <span class="script">illustrations</span>
+      <h2 id="t-cast">Some parts you might recognise</h2>
+      <p>Everyone’s inner world looks different. These characters are just a playful way to picture a few of the voices described above. Tap one to say hello.</p>
+    </div>
+    <div class="cast-grid in" id="cast-grid"></div>
+  </section>
+  <section class="video in">
+    <span class="chr" data-c="self" aria-hidden="true"></span>
+    <div>
+      <h2>This page is still in the making</h2>
+      <p>While it’s in making, I recommend watching the intro by Dr. Tori Olds. Or I’ll be happy to explain more during our free intake session.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a class="btn" href="https://www.youtube.com/watch?v=tNA5qTTxFFA">Watch the intro</a>
+        <a class="btn blue" href="https://cal.com/denisruksha?orgRedirection=true">Book a free intro</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PRICE ================= -->
+<div class="view" data-view="price" hidden>
+  <header class="page-head in stripes on-stripes" data-seed="37">
+    <div class="head-card">
+      <span class="script">practicalities</span>
+      <h1>Fees</h1>
+      <p>I use a sliding scale to make therapy more accessible for everyone. I mention rates for a 1 hour session. You can choose the rate that best fits your financial situation. If things change, your rate can change too.</p>
+    </div>
+  </header>
+  <section class="rates in" aria-label="Rates">
+    <article class="rate"><span class="chr" data-c="body" aria-hidden="true"></span><span class="per">per 1 hour session</span><div class="amt">35€<sup>*</sup></div><h3>Reduced rate</h3><p>If you’re going through a difficult financial period and can’t afford the standard fee, this option is for you.</p></article>
+    <article class="rate std"><span class="chr" data-c="self" aria-hidden="true"></span><span class="per">per 1 hour session</span><div class="amt">50€</div><h3>Standard rate</h3><p>If your financial situation is relatively stable and you can afford this amount, this is the regular fee.</p></article>
+    <article class="rate"><span class="chr" data-c="trust" aria-hidden="true"></span><span class="per">per 1 hour session</span><div class="amt">65€</div><h3>Solidarity rate</h3><p>If you’re in a comfortable financial position, you can choose to pay a little more.</p></article>
+  </section>
+  <section class="solid in">
+    <p class="big">Your contribution helps me offer reduced-fee sessions to people who otherwise couldn’t afford therapy.</p>
+    <div class="small"><p>*I trust you to know what you can afford. No proof of income or uncomfortable questions.</p><p>If your financial situation changes, you can adjust your rate.</p></div>
+  </section>
+  <section class="rules in" aria-labelledby="t-rules">
+    <div class="rules-head"><h2 id="t-rules">Other things</h2><p>To make our work together easier, there are a few flexible rules.</p></div>
+    <div class="rule-grid">
+      <div class="rule"><h3>Cancellations</h3><p>Please cancel or reschedule at least 12 hours before your session. Otherwise, the full session fee applies.</p><p>If something important comes up, just reach out and we can cancel or reschedule without any charge.</p></div>
+      <div class="rule"><h3>Last-minute bookings</h3><p>If you’d like to book a session for today or tomorrow, please contact me first to check my availability.</p></div>
+      <div class="rule"><h3>Payments</h3><p>Please pay for your session in advance, before it takes place.</p><p>If you can’t pay beforehand for any reason, just let me know and we’ll figure something out.</p></div>
+      <div class="rule"><h3>Running late</h3><p>If you’re running late, please send me a quick message. We’ll still need to finish at our scheduled time, so the session may be a little shorter.</p></div>
+      <div class="rule wide"><h3>Price changes</h3><div><p>As I gain more experience and complete further training, my session fees may gradually increase.</p><p>For existing clients, any regular price increase will be announced at least 8 sessions in advance (and at least 60 days beforehand) and won’t exceed 10% within a 12-month period.</p><p>Affordability matters, so if a price change makes it difficult for you to continue, we can always discuss a rate that works for you.</p></div><div class="hl-box"><strong>One upcoming change:</strong> I’m expecting to complete my psychology degree in spring 2027. Once I graduate, my session fees will increase by €20. This is a one-time adjustment, separate from the regular annual increases.</div></div>
+      <div class="rule wide"><h3>Between sessions</h3><p>You’re welcome to contact me about bookings, payments or other questions.</p><p>Just keep in mind that I may not be able to reply immediately, and I don’t provide emergency support through messages.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= BLOG ================= -->
+<div class="view" data-view="blog" hidden>
+  <header class="page-head in">
+    <span class="chr ph-l" data-c="habits" aria-hidden="true"></span>
+    <span class="chr ph-r" data-c="worry" aria-hidden="true"></span>
+    <span class="script">notes &amp; stories</span>
+    <h1>Blog</h1>
+    <p>Writing and picture stories on queer mental health, IFS, and more.</p>
+  </header>
+  <section class="posts in" aria-label="Posts">
+    <a class="post-card" href="#post"><div class="art" style="background:var(--sky)"><span class="chr" data-c="critic"></span><span class="chr" data-c="rest"></span></div><div class="txt"><span class="kind">Article</span><span class="example">example</span><h3>What are parts?</h3><p>Gut feelings, sensory cues, and why IFS gives them names. A template for written posts.</p></div></a>
+    <a class="post-card" href="#story"><div class="art" style="background:var(--butter)"><span class="chr" data-c="habits"></span><span class="chr" data-c="self"></span></div><div class="txt"><span class="kind story">Picture story</span><span class="example">example</span><h3>A Sunday with your parts</h3><p>A short story told in pictures. Scroll down or swipe right, whichever feels better.</p></div></a>
+    <div class="post-card" aria-disabled="true"><div class="art" style="background:var(--paper)"><span class="chr" data-c="change"></span></div><div class="txt"><span class="kind soon">Coming soon</span><h3>Your next post</h3><p>New articles and stories will appear here as they are written.</p></div></div>
+  </section>
+  <div class="insta">
+    <p><strong>Until then, there’s Instagram</strong>Head over to my Instagram for research findings and personal reflections on queer mental health, IFS, and more.</p>
+    <a class="btn" href="https://www.instagram.com/denisruksha/">Open Instagram</a>
+  </div>
+</div>
+
+<!-- ================= ARTICLE TEMPLATE ================= -->
+<div class="view" data-view="post" hidden>
+  <header class="art-head in">
+    <span class="kind">Article</span><span class="example">example post · template</span>
+    <h1>What are parts?</h1>
+    <div class="meta">Denis Ruksha · 4 min read</div>
+  </header>
+  <div class="art-hero"><span class="chr" data-c="rest"></span><span class="chr" data-c="critic"></span><span class="chr" data-c="worry"></span></div>
+  <article class="prose in">
+    <p class="lede">Internal Family Systems is an experiential therapy. It uses our senses as a gateway to the subconscious.</p>
+    <p>Our brain processes much more than our conscious mind can access. Our body records our experiences and gives us sensory cues when we face something similar.</p>
+    <h2>That gut feeling</h2>
+    <p>Something just feels “right” or “scary,” and we move towards or avoid it. It’s that gut feeling, a soup of everything we’ve experienced before.</p>
+    <blockquote><p>We might want to both rest and keep working at the same time.</p></blockquote>
+    <h2>When cues pull in different directions</h2>
+    <p>These cues are often not interconnected, which might feel quite confusing. And we might bash ourselves with criticism if we decide to lie down when the job isn’t done.</p>
+    <figure><div class="duo"><span class="chr" data-c="rest"></span><span class="chr" data-c="critic"></span></div><figcaption>one part wants to rest, another won’t let it</figcaption></figure>
+    <h2>Why call them parts?</h2>
+    <p>In IFS, we call these cues, sensations, and thoughts parts. That way, we can structure them and find and heal the underlying causes.</p>
+    <ul><li>a sensation that shows up before you know why</li><li>a thought that repeats itself</li><li>an urge to move towards something, or away from it</li></ul>
+    <div class="aside"><p>There is a lot more to say about it. I’ll be happy to explain more during our free intake session.</p></div>
+    <div class="author"><img src="img/cover.webp" alt="Denis Ruksha"><p><strong>Denis Ruksha</strong> is an IFS practitioner working online in English, Polish and Russian, mainly with queer folks and expats.</p></div>
+    <div class="next"><a class="btn ghost" href="#blog">← All posts</a><a class="btn" href="#story">Next: a picture story →</a></div>
+  </article>
+</div>
+
+<!-- ================= VISUAL STORY TEMPLATE ================= -->
+<div class="view" data-view="story" hidden>
+  <header class="art-head in">
+    <span class="kind story">Picture story</span><span class="example">example story · template</span>
+    <h1>A Sunday with your parts</h1>
+    <div class="meta">Denis Ruksha · 7 pictures</div>
+  </header>
+  <div class="story-bar in">
+    <span class="label" style="color:var(--muted)">Read it by</span>
+    <div class="seg" role="group" aria-label="Story layout">
+      <button type="button" id="mode-scroll" aria-pressed="true">Scrolling down</button>
+      <button type="button" id="mode-swipe" aria-pressed="false">Swiping right</button>
+    </div>
+  </div>
+  <section class="story in" id="story" aria-label="Picture story">
+    <div class="frames" id="frames" tabindex="0"></div>
+    <div class="story-nav"><button class="arrow" type="button" id="prev" aria-label="Previous picture">←</button><div class="dots" id="dots"></div><button class="arrow" type="button" id="next" aria-label="Next picture">→</button></div>
+  </section>
+</div>
+
+<footer class="in">
+  <span class="chr peek" data-c="worry" aria-hidden="true"></span>
+  <p class="logo">Denis Ruksha</p>
+  <span>IFS therapy · online · english, russian &amp; polish</span>
+  <nav aria-label="Footer">
+    <a href="#home">Homepage</a>
+    <a href="#ifs">IFS</a>
+    <a href="#blog">blog</a>
+    <a href="#price">price</a>
+    <a href="https://www.instagram.com/denisruksha/">instagram</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+(function(){
+var INK='#2b1a12';
+var S='stroke="'+INK+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"';
+function eye(x,y,r,dx,dy){r=r||6.5;dx=dx||0;dy=dy||0;return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="#fff" stroke="'+INK+'" stroke-width="2.2"/><circle cx="'+(x+dx)+'" cy="'+(y+dy)+'" r="'+(r*.46)+'" fill="'+INK+'"/>';}
+function eyes(a,b,r,dx,dy){return '<g class="blink">'+eye(a[0],a[1],r,dx,dy)+eye(b[0],b[1],r,dx,dy)+'</g>';}
+function shut(x,y){return '<path d="M'+(x-6)+' '+y+' Q'+x+' '+(y+5)+' '+(x+6)+' '+y+'" '+S+'/>';}
+function legs(x1,x2,y1,y2,shoe,cls){cls=cls||['',''];shoe=shoe||'#e8532f';
+  return '<g class="'+cls[0]+'"><path d="M'+x1+' '+y1+' L'+x1+' '+y2+'" '+S+'/><ellipse cx="'+(x1-4)+'" cy="'+(y2+1)+'" rx="8" ry="4.2" fill="'+shoe+'" stroke="'+INK+'" stroke-width="2"/></g>'+
+         '<g class="'+cls[1]+'"><path d="M'+x2+' '+y1+' L'+x2+' '+y2+'" '+S+'/><ellipse cx="'+(x2+4)+'" cy="'+(y2+1)+'" rx="8" ry="4.2" fill="'+shoe+'" stroke="'+INK+'" stroke-width="2"/></g>';}
+function blush(a,b){return '<circle cx="'+a[0]+'" cy="'+a[1]+'" r="5" fill="#f08aa6" opacity=".6"/><circle cx="'+b[0]+'" cy="'+b[1]+'" r="5" fill="#f08aa6" opacity=".6"/>';}
+var SH='<ellipse cx="70" cy="142" rx="36" ry="5" fill="'+INK+'" opacity=".12"/>';
+function star(cx,cy,ro,ri,n){var p=[];for(var i=0;i<n*2;i++){var r=i%2?ri:ro,a=Math.PI*i/n-Math.PI/2;p.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));}return p.join(' ');}
+
+var C={
+ identity:{name:'Identity',say:'Who am I today?',g:function(){return SH+'<g class="a-sway">'+legs(60,80,112,136,'#e8532f')+
+   '<path d="M28 80 L14 70 M112 80 L126 70" '+S+'/>'+
+   '<g filter="url(#tex)"><path d="M70 28 A44 44 0 0 0 70 116 Z" fill="#f2a0bf"/><path d="M70 28 A44 44 0 0 1 70 116 Z" fill="#8fb7e8"/></g>'+
+   '<path d="M68 28 C62 14 78 10 78 20" '+S+'/>'+eyes([56,66],[84,66],7,0,0)+'<path d="M60 90 Q70 98 80 90" '+S+'/></g>';}},
+ body:{name:'Body',say:'I’m allowed to feel at home here.',g:function(){return SH+'<g class="a-breathe">'+legs(60,80,126,138,'#5f8f78')+
+   '<path filter="url(#tex)" d="M70 20 C100 20 114 60 114 92 C114 122 94 130 70 130 C46 130 26 122 26 92 C26 60 40 20 70 20Z" fill="#f4cf4a"/>'+
+   shut(56,62)+shut(84,62)+blush([48,74],[92,74])+'<path d="M62 78 Q70 86 78 78" '+S+'/>'+
+   '<path d="M30 84 C44 104 76 106 94 94" '+S+'/><path d="M110 84 C96 104 64 106 46 94" '+S+'/></g>';}},
+ habits:{name:'Habits',say:'Just one more scroll…',g:function(){return SH+'<g class="a-bob">'+legs(56,84,122,138,'#8fb7e8')+
+   '<path filter="url(#tex)" d="M22 124 C16 80 40 46 70 46 C100 46 124 80 118 124 Z" fill="#9b7bd4"/>'+
+   eyes([57,72],[83,72],6.5,0,3)+'<path d="M64 86 L76 86" '+S+'/>'+
+   '<rect x="57" y="92" width="26" height="32" rx="5" fill="'+INK+'"/><rect class="glow" x="60" y="96" width="20" height="23" rx="2" fill="#b9d2ee"/>'+
+   '<path d="M28 102 Q42 114 58 110 M112 102 Q98 114 82 110" '+S+'/></g>';}},
+ critic:{name:'Inner critic',say:'You could have done better.',g:function(){return SH+'<g>'+legs(58,82,124,138,'#2b1a12')+
+   '<path d="M40 88 L22 102" '+S+'/><g class="wag"><path d="M100 80 L120 60 L124 50" '+S+'/></g>'+
+   '<rect filter="url(#tex)" x="38" y="32" width="64" height="94" rx="12" fill="#4f86d6"/>'+
+   '<rect x="56" y="14" width="28" height="18" rx="2" fill="#5f8f78" stroke="'+INK+'" stroke-width="2.2"/><path d="M48 32 L92 32" '+S+'/>'+
+   '<path d="M48 58 L64 64 M92 58 L76 64" '+S+'/>'+eyes([57,72],[83,72],6.5,0,0)+'<path d="M58 104 Q70 94 82 104" '+S+'/></g>';}},
+ rest:{name:'Rest',say:'Zzz… just five more minutes.',g:function(){return SH+'<g class="a-breathe">'+
+   '<ellipse cx="28" cy="114" rx="20" ry="13" fill="#fbf7ef" stroke="'+INK+'" stroke-width="2.2"/>'+
+   '<ellipse filter="url(#tex)" cx="74" cy="108" rx="52" ry="28" fill="#ee7a3a"/>'+
+   shut(44,100)+shut(62,100)+'<path d="M48 114 Q54 118 60 114" '+S+'/>'+
+   '<path d="M124 112 L134 106 M122 120 L134 120" '+S+'/></g>'+
+   '<text class="zz" x="78" y="68" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="16" fill="'+INK+'">z</text>'+
+   '<text class="zz d2" x="92" y="56" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="20" fill="'+INK+'">z</text>'+
+   '<text class="zz d3" x="108" y="44" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="24" fill="'+INK+'">Z</text>';}},
+ change:{name:'Change',say:'Somewhere new. Scary and exciting.',g:function(){return SH+'<g class="a-bob">'+legs(58,82,116,136,'#e8532f',['walk-l','walk-r'])+
+   '<path d="M36 84 L22 96" '+S+'/><path d="M104 84 L114 100" '+S+'/>'+
+   '<path filter="url(#tex)" d="M70 24 C98 24 108 56 106 86 C104 112 92 120 70 120 C48 120 34 112 34 86 C32 56 42 24 70 24Z" fill="#5fae5a"/>'+
+   eyes([60,64],[84,64],6.5,2,0)+'<path d="M62 86 Q72 96 82 86" '+S+'/>'+
+   '<rect x="106" y="100" width="28" height="22" rx="4" fill="#f4e08a" stroke="'+INK+'" stroke-width="2.2"/><path d="M114 100 L114 95 L126 95 L126 100" '+S+'/></g>';}},
+ trust:{name:'Trust',say:'I’ve got you.',g:function(){return SH+'<g class="a-sway">'+
+   legs(36,50,108,136,'#8fb7e8')+legs(90,106,106,136,'#e8532f')+
+   '<circle filter="url(#tex)" cx="44" cy="84" r="27" fill="#f2a0bf"/><circle filter="url(#tex)" cx="98" cy="80" r="30" fill="#f4cf4a"/>'+
+   eyes([36,80],[52,80],5,1,0)+eyes([90,76],[106,76],5.5,-1,0)+
+   '<path d="M38 94 Q44 99 50 94 M92 92 Q98 98 104 92" '+S+'/>'+
+   '<path d="M64 98 L71 106 L76 98" '+S+'/>'+
+   '<path class="hbeat" d="M71 46 C66 38 56 42 60 50 L71 60 L82 50 C86 42 76 38 71 46Z" fill="#e8532f"/></g>';}},
+ desire:{name:'Desire',say:'What do I actually want?',g:function(){return SH+'<g class="a-pulse">'+legs(62,78,120,138,'#f4cf4a')+
+   '<path d="M26 74 L12 64 M114 74 L128 64" '+S+'/>'+
+   '<path filter="url(#tex)" d="M70 126 C30 98 18 76 26 56 C34 36 60 36 70 56 C80 36 106 36 114 56 C122 76 110 98 70 126Z" fill="#e8532f"/>'+
+   eyes([56,72],[84,72],6.5,0,0)+'<path d="M48 62 L46 57 M53 60 L52 55 M92 62 L94 57 M87 60 L88 55" '+S+'/>'+
+   blush([48,86],[92,86])+'<path d="M64 90 Q70 95 76 90" '+S+'/></g>';}},
+ anger:{name:'Anger',say:'That really upset me!',g:function(){return SH+'<g class="a-shake">'+legs(60,80,118,138,'#2b1a12')+
+   '<polygon filter="url(#tex)" points="'+star(70,82,46,34,12)+'" fill="#d8261c"/>'+
+   '<path d="M50 66 L64 72 M90 66 L76 72" '+S+'/>'+eyes([57,78],[83,78],6,0,0)+
+   '<path d="M56 102 L62 96 L70 102 L78 96 L84 102" '+S+'/></g>'+
+   '<circle class="steam" cx="40" cy="28" r="8" fill="#fbf7ef" stroke="'+INK+'" stroke-width="2"/><circle class="steam d2" cx="100" cy="26" r="9" fill="#fbf7ef" stroke="'+INK+'" stroke-width="2"/>';}},
+ self:{name:'Self',say:'Hello. I’m curious about all of you.',g:function(){var r='';for(var i=0;i<12;i++){var a=i*Math.PI/6;r+='<path d="M'+(70+50*Math.cos(a)).toFixed(1)+' '+(78+50*Math.sin(a)).toFixed(1)+' L'+(70+62*Math.cos(a)).toFixed(1)+' '+(78+62*Math.sin(a)).toFixed(1)+'" stroke="#e8532f" stroke-width="4" stroke-linecap="round"/>';}
+   return SH+'<g class="spin">'+r+'</g><g class="a-breathe">'+legs(60,80,118,138,'#8fb7e8')+
+   '<circle filter="url(#tex)" cx="70" cy="78" r="42" fill="#f4cf4a"/>'+shut(56,72)+shut(84,72)+blush([48,86],[92,86])+'<path d="M58 88 Q70 100 82 88" '+S+'/></g>';}},
+ worry:{name:'Worry',say:'What if it all goes wrong?',g:function(){return SH+'<g class="a-tremble">'+legs(62,78,124,138,'#f4cf4a')+
+   '<path d="M44 74 C34 70 36 60 28 56 M96 74 C106 70 104 60 112 56" '+S+'/>'+
+   '<path filter="url(#tex)" d="M70 18 C92 18 98 50 96 80 C94 110 90 126 70 126 C50 126 46 110 44 80 C42 50 48 18 70 18Z" fill="#8fb7e8"/>'+
+   eyes([60,58],[80,58],8.5,0,-2)+'<ellipse cx="70" cy="86" rx="5" ry="6" fill="'+INK+'"/>'+
+   '<path class="drop" d="M100 38 C104 44 104 48 100 48 C96 48 96 44 100 38Z" fill="#b9d2ee" stroke="'+INK+'" stroke-width="1.6"/></g>';}}
+};
+
+function svg(k){return '<svg viewBox="0 0 140 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">'+C[k].g()+'</svg>';}
+function mount(root){(root||document).querySelectorAll('.chr[data-c]').forEach(function(el){
+  if(el.dataset.done)return; var k=el.dataset.c; if(!C[k])return; el.innerHTML=svg(k); el.dataset.done=1;
+  el.title=C[k].say;
+  var d=(-Math.random()*4).toFixed(2)+'s'; el.querySelectorAll('g,circle,path,text,rect').forEach(function(n){if(n.getAttribute('class'))n.style.animationDelay=d;});
+  el.addEventListener('click',function(){el.classList.remove('hop');void el.offsetWidth;el.classList.add('hop');});
+});}
+
+/* topic cards */
+var topics=[
+ ['identity','Identity','o','Identity & Belonging','Coming out, questioning your identity, or dealing with expectations from family and society. Feeling out of place or finding it difficult to accept yourself.'],
+ ['body','Body','b','Body Image & Self-Worth','Comparing your appearance to others, feeling uncomfortable in your body, or letting your looks determine how you feel about yourself. Feeling pressure to meet unrealistic standards.'],
+ ['habits','Habits','y','Habits & Avoidance','Putting things off, withdrawing from people, or spending more time scrolling than you intended. Repeating behaviours that leave you frustrated or make everyday life harder.'],
+ ['critic','Inner<br>critic','b','Anxiety & Self-Criticism','Overthinking conversations, expecting things to go wrong, or feeling that nothing you do is good enough. Struggling to switch off, even when you have time to rest.'],
+ ['rest','Rest','y','Stress & Burnout','Feeling constantly under pressure, taking on too much, or struggling to rest without guilt. Reaching the end of the day exhausted, with little energy left for yourself.'],
+ ['change','Change','o','Grief & Life Changes','Adjusting to a breakup, losing someone, moving somewhere new, or facing an unexpected change. Missing what you had and trying to work out what life looks like now.'],
+ ['trust','Trust','y','Relationships & Connection','Feeling lonely, finding it difficult to trust or get close to someone, or repeatedly ending up in relationships that hurt. Saying what you need and setting boundaries.'],
+ ['desire','Desire','o','Sex & Intimacy','Feeling shame around sex, struggling to talk about your preferences, or feeling pressure to perform. Exploring your desires, boundaries, and what makes intimacy comfortable.'],
+ ['anger','Anger','b','Anger & Conflict','Snapping at people, shutting down during conflict, or feeling overwhelmed. Finding it difficult to express anger, recover after an argument, or explain what upset you.']
+];
+document.getElementById('topic-cards').innerHTML=topics.map(function(t){return '<article class="card"><div class="blob '+t[2]+'">'+t[1]+'</div><h3>'+t[3].replace('&','&amp;')+'</h3><p>'+t[4]+'</p></article>';}).join('');
+
+/* IFS cast */
+var cast=[['rest','The one that wants to rest'],['critic','The one that criticises'],['habits','The one that avoids'],['worry','The one that worries'],['anger','The one that protects'],['change','The one that keeps going'],['body','The one that soothes'],['self','Self']];
+var castText={rest:'“Can we lie down now?”',critic:'“The job isn’t done yet.”',habits:'“Let’s not feel this right now.”',worry:'“What if it goes wrong?”',anger:'“Nobody gets to treat us like that.”',change:'“Keep moving, don’t stop.”',body:'“It’s okay, I’m here.”',self:'Curious and calm, and able to listen to every part.'};
+document.getElementById('cast-grid').innerHTML=cast.map(function(c){return '<button type="button" class="member" data-k="'+c[0]+'"><span class="chr" data-c="'+c[0]+'" aria-hidden="true"></span><h3>'+c[1]+'</h3><p>'+castText[c[0]]+'</p></button>';}).join('');
+document.getElementById('cast-grid').addEventListener('click',function(e){var b=e.target.closest('.member');if(!b)return;var ch=b.querySelector('.chr');ch.classList.remove('hop');void ch.offsetWidth;ch.classList.add('hop');});
+
+/* story frames (example) */
+var frames=[
+ {c:['rest'],bg:'f-butter',t:'It’s Sunday. You finally have time to rest.'},
+ {c:['critic'],bg:'f-sky',t:'Then a part of you speaks up: “The job isn’t done yet.”'},
+ {c:['habits'],bg:'f-paper',t:'Another part reaches for the phone, so you don’t have to feel any of it.'},
+ {c:['worry','rest'],bg:'f-stripe',t:'Now you want to both rest and keep working at the same time.'},
+ {c:['self'],bg:'f-butter',t:'In IFS, we call these voices parts. We don’t fight them. We get curious.'},
+ {c:['critic','body'],bg:'f-sky',t:'What is this part trying to protect you from?'},
+ {c:['trust'],bg:'f-frame',t:'Curious about your own parts? Let’s meet for a free 30-minute intro.'}
+];
+var fr=document.getElementById('frames');
+fr.innerHTML=frames.map(function(f,i){return '<div class="frame '+f.bg+'" role="group" aria-label="Picture '+(i+1)+' of '+frames.length+'"><span class="num">'+String(i+1).padStart(2,'0')+' / '+String(frames.length).padStart(2,'0')+'</span><div class="stage'+(f.c.length>1?' two':'')+'">'+f.c.map(function(k){return '<span class="chr" data-c="'+k+'" aria-hidden="true"></span>';}).join('')+'</div><p>'+f.t+'</p>'+(i===frames.length-1?'<a class="btn" style="margin-top:16px" href="https://cal.com/denisruksha?orgRedirection=true">Book a free intro</a>':'')+'</div>';}).join('');
+var dots=document.getElementById('dots');dots.innerHTML=frames.map(function(){return '<span></span>';}).join('');
+var storyEl=document.getElementById('story');
+function setMode(m){storyEl.classList.toggle('swipe',m==='swipe');document.getElementById('mode-scroll').setAttribute('aria-pressed',m!=='swipe');document.getElementById('mode-swipe').setAttribute('aria-pressed',m==='swipe');try{localStorage.setItem('storyMode',m);}catch(e){}updDots();}
+document.getElementById('mode-scroll').onclick=function(){setMode('scroll');};
+document.getElementById('mode-swipe').onclick=function(){setMode('swipe');};
+function cur(){var w=fr.children[0].getBoundingClientRect().width+18;return Math.round(fr.scrollLeft/w);}
+function go(d){var i=Math.max(0,Math.min(frames.length-1,cur()+d));var el=fr.children[i];fr.scrollTo({left:el.offsetLeft-(fr.clientWidth-el.clientWidth)/2,behavior:'smooth'});}
+function updDots(){var i=storyEl.classList.contains('swipe')?cur():-1;[].forEach.call(dots.children,function(s,j){s.className=j===i?'on':'';});}
+document.getElementById('prev').onclick=function(){go(-1);};document.getElementById('next').onclick=function(){go(1);};
+fr.addEventListener('scroll',function(){requestAnimationFrame(updDots);});
+fr.addEventListener('keydown',function(e){if(!storyEl.classList.contains('swipe'))return;if(e.key==='ArrowRight'){go(1);e.preventDefault();}if(e.key==='ArrowLeft'){go(-1);e.preventDefault();}});
+try{if(localStorage.getItem('storyMode')==='swipe')setMode('swipe');}catch(e){}
+
+/* stripes generated from the shirt palette: lime, teal, sea-glass, cream, navy pin */
+function rng(s){return function(){s=(s*16807)%2147483647;return (s-1)/2147483646;};}
+var PAL=[['#9cc45c',[18,40]],['#b8cdb9',[10,24]],['#5f8f78',[6,16]],['#f6f0dc',[3,8]],['#3f5a8a',[1.5,3]],['#a9c79a',[8,18]],['#f6f0dc',[2,5]],['#7fa98a',[5,12]]];
+function paint(el){var r=rng(+el.dataset.seed||7),x=0,rects='',W=1400,seq=[0,1,3,2,4,5,6,1,7,3,0,4,2,6];
+  var i=0;while(x<W){var p=PAL[seq[i%seq.length]],w=p[1][0]+r()*(p[1][1]-p[1][0]);rects+='<rect x="'+x.toFixed(1)+'" y="-20" width="'+(w+1).toFixed(1)+'" height="1040" fill="'+p[0]+'"/>';x+=w;i++;}
+  var s='<svg class="paint" viewBox="0 0 '+W+' 1000" preserveAspectRatio="xMinYMid slice" aria-hidden="true"><rect width="'+W+'" height="1000" fill="#f6f0dc"/><g filter="url(#paint)">'+rects+'</g></svg>';
+  el.insertAdjacentHTML('afterbegin',s);}
+document.querySelectorAll('.stripes').forEach(paint);
+
+/* router */
+var views=[].slice.call(document.querySelectorAll('.view'));
+function route(){var h=(location.hash||'#home').slice(1);if(!views.some(function(v){return v.dataset.view===h;}))h='home';
+  views.forEach(function(v){v.hidden=v.dataset.view!==h;});
+  document.querySelectorAll('[data-nav]').forEach(function(a){if(a.dataset.nav===h||(h==='post'||h==='story')&&a.dataset.nav==='blog')a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+  window.scrollTo(0,0);updDots();}
+window.addEventListener('hashchange',route);
+mount();route();
+
+/* contact form (demo) */
+document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();
+  var n=document.getElementById('f-name'),m=document.getElementById('f-email'),st=document.getElementById('f-status');
+  if(!n.value.trim()||!m.value.trim()||!m.checkValidity()){st.className='note';st.textContent='Please add your preferred name and a valid email address.';return;}
+  st.className='note thanks';st.textContent='Thank you for your response. ✨ (preview only: on the live site this would reach Denis)';});
+})();
+</script>
